@@ -1,0 +1,65 @@
+@import '../Vars.scss';
+
+.banner {
+  align-items: center;
+  background: linear-gradient($sky-blue, $rose-color);
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+
+  .banner__info {
+    display: flex;
+    flex-direction: column;
+    margin: 0 50px;
+    position: relative;
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 100;
+    }
+
+    p {
+      font-weight: 100;
+      opacity: 0.7;
+    }
+
+    form {
+      display: flex;
+      flex-wrap: wrap;
+
+      label {
+        margin: 10px 10px 10px 0;
+        width: 48%;
+
+        p {
+          font-weight: 100;
+          margin: 0;
+          margin: 8px 0;
+          opacity: 0.6;
+        }
+
+        input {
+          border-radius: 10px;
+          border: none;
+          outline: none;
+          padding: 15px;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .banner__img {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+
+    .img-micro {
+      left: 55px;
+      position: relative;
+    }
+  }
+}

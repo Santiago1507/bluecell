@@ -1,0 +1,35 @@
+@import '../Vars.scss';
+
+.footer {
+  position: relative;
+  width: 100%;
+
+  .content__footer {
+    bottom: 0px;
+    padding: 0 50px;
+    position: absolute;
+    width: 100%;
+
+    hr {
+      border: $white-color solid 1px;
+      opacity: 0.7;
+    }
+
+    .dist-legal {
+      display: flex;
+      justify-content: space-between;
+
+      .legal {
+        align-items: center;
+        display: flex;
+        justify-content: space-around;
+
+        a {
+          color: white;
+          margin: 0 10px;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+@import './vars.scss';
+@import './Media.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: $rose-color;
+  color: $white-color;
+  font-family: $robot-font;
+  margin: 0;
+}
+
+span.logo {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+span.logo:before {
+  background: $white-color;
+  bottom: 0;
+  content: '';
+  height: 3px;
+  position: absolute;
+  width: 20px;
+}
+
+.highlight {
+  color: $yellow-color;
+}
+
+h2 {
+  font-weight: 300;
+}
+
+a.btn-primary,
+a.btn-secondary {
+  background: $btn-color;
+  border-radius: 5px;
+  border: none;
+  color: $white-color;
+  margin: 20px 0;
+  padding: 10px 40px;
+  text-decoration: none;
+
+  &:hover {
+    background: $purple-color;
+  }
+}
+
+a.btn-secondary {
+  background: $rose-color;
+}

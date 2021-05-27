@@ -1,0 +1,124 @@
+@import '../Vars.scss';
+
+.our-clients {
+  background: linear-gradient($rose-color, $purple-color);
+  clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+  padding-bottom: 60px;
+  position: relative;
+
+  .content-build {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 0 50px;
+    overflow: hidden;
+    position: relative;
+
+    .our__desc {
+      display: flex;
+      flex-direction: column;
+      // position: relative;
+      width: 50%;
+
+      h2 {
+        font-size: 3rem;
+        margin: 0;
+      }
+
+      .highlight {
+        font-size: 1.5rem;
+        margin: 0;
+      }
+
+      .btn-primary {
+        width: 150px;
+      }
+    }
+
+    .content_carousel {
+      padding-bottom: 50px;
+      width: 50%;
+
+      ol.carousel-indicators {
+        justify-content: space-around;
+
+        &:before {
+          border: $yellow-color dashed 1px;
+          content: '';
+          height: 1px;
+          position: absolute;
+          top: 9px;
+          width: 70%;
+        }
+
+        li {
+          background: #91578f;
+          border-radius: 50%;
+          border: $yellow-color solid 1px;
+          height: 20px;
+          position: relative;
+          width: 20px;
+
+          &.active:before {
+            align-items: center;
+            color: $yellow-color;
+            content: '.';
+            display: flex;
+            font-size: 15rem;
+            height: 100%;
+            justify-content: center;
+            left: 1.9px;
+            position: absolute;
+            top: -77.57px;
+            width: 100%;
+          }
+        }
+      }
+      .carousel-item {
+        height: 650px;
+
+        img {
+          height: auto;
+          width: 100%;
+        }
+
+        @supports (object-fit: cover) {
+          .carousel-item img {
+            height: 100%;
+            object-fit: cover;
+            object-position: center center;
+          }
+        }
+      }
+    }
+  }
+
+  .content-clients {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 50px;
+    position: relative;
+    text-align: center;
+
+    .clients {
+      align-items: center;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 60%;
+
+      img {
+        filter: brightness(5);
+        margin: 40px;
+        width: calc(17% - 22px);
+      }
+    }
+  }
+
+  .clip-img {
+    bottom: -160px;
+    position: absolute;
+  }
+}

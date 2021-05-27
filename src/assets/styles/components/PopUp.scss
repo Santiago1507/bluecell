@@ -1,0 +1,179 @@
+@import '../Vars.scss';
+
+#popUp {
+  align-items: center;
+  background: #00000085;
+  display: none;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+
+  form {
+    background: linear-gradient($sky-blue, $rose-color);
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px 8px #00000045;
+    padding: 20px;
+    position: relative;
+    text-align: center;
+    width: 60%;
+
+    #close {
+      cursor: pointer;
+      font-size: 1.3rem;
+      font-weight: bold;
+      position: absolute;
+      right: 30px;
+      top: 18px;
+    }
+
+    .content-pop {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      margin: 20px auto;
+      max-width: 690px;
+      min-height: 300px;
+
+      &.active {
+        display: flex;
+      }
+
+      h2 {
+        margin-bottom: 50px;
+      }
+
+      .title {
+        font-size: 0.8rem;
+        margin: 0 auto;
+        text-align: left;
+        text-transform: uppercase;
+        width: 40%;
+      }
+
+      select,
+      .range,
+      .contact-input {
+        border-radius: 5px;
+        border: none;
+        margin-bottom: 15px;
+        outline: none;
+        padding: 5px;
+        width: 40%;
+      }
+
+      .input-radio {
+        align-items: start;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        position: relative;
+        width: 40%;
+
+        label {
+          margin: 10px 0;
+        }
+      }
+
+      .inputs {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        width: 40%;
+
+        label input {
+          margin: 10px 15px;
+        }
+      }
+
+      .input-check {
+        flex-wrap: wrap;
+        margin: 20px auto;
+        width: 60%;
+
+        label {
+          align-items: center;
+          display: flex;
+          justify-content: center;
+          margin: 0 10px;
+        }
+      }
+
+      .content-form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        position: relative;
+        width: 100%;
+
+        label {
+          margin: 0 20px;
+          text-align: left;
+
+          .title{
+              margin: 0;
+          }
+          
+          input {
+            width: 100%;
+          }
+        }
+      }
+      //   style inputs
+      .option-input {
+        appearance: none;
+        background: $transparent;
+        border: solid 1px $white-color;
+        color: $white-color;
+        cursor: pointer;
+        display: inline-block;
+        height: 20px;
+        margin-right: 0.5rem;
+        outline: none;
+        position: relative;
+        top: 4px;
+        transition: all 0.15s ease-out 0s;
+        width: 20px;
+        z-index: 1000;
+
+        &:hover {
+          background: #9faab7;
+        }
+
+        &:checked::before {
+          background: $white-color;
+          border-radius: 50%;
+          content: '';
+          display: inline-block;
+          height: 10px;
+          left: 4px;
+          position: absolute;
+          text-align: center;
+          top: 4px;
+          width: 10px;
+        }
+
+        &.radio {
+          border-radius: 50%;
+        }
+
+        &.radio::after {
+          border-radius: 50%;
+        }
+
+        &.checkbox {
+          border-radius: 0%;
+          top: 0;
+        }
+
+        &.checkbox::after,
+        &.checkbox:checked::before {
+          border-radius: 0%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@import '../Vars.scss';
+
+.creative {
+  align-items: center;
+  background: $rose-color;
+  display: flex;
+  padding: 70px 0;
+
+  .crea__img {
+    position: relative;
+    width: 50%;
+  }
+  .crea__info {
+    left: 50%;
+    position: absolute;
+    overflow: hidden;
+
+    .desc {
+      width: 55%;
+
+      &:nth-child(2) {
+        margin-left: 80px;
+      }
+
+      p {
+        font-size: 1rem;
+        font-weight: 100;
+        opacity: 0.7;
+      }
+    }
+  }
+}
